@@ -22,6 +22,7 @@ import {
   PhoneOutlined,
   MailOutlined,
   EnvironmentOutlined,
+  TeamOutlined,
   StarOutlined,
   CheckCircleOutlined,
   ClockCircleOutlined,
