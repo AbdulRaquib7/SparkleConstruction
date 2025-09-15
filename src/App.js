@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+// removed unused useInView import
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { 
@@ -37,13 +37,7 @@ import {
   Business, 
   HomeWork, 
   DesignServices,
-  People,
-  Star,
-  TrendingUp,
-  Security,
-  Eco,
-  Speed,
-  Support
+  People
 } from '@mui/icons-material';
 import './App.css';
 
