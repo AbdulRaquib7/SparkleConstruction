@@ -8,34 +8,24 @@ import {
   Card, 
   Row, 
   Col, 
-  Statistic, 
   Carousel, 
   Avatar, 
   Rate, 
-  Timeline, 
   Collapse, 
-  Badge,
-  Progress,
   Tag,
   Space,
   Typography,
   Divider
 } from 'antd';
 import { 
-  HomeOutlined, 
-  BuildOutlined, 
   ToolOutlined, 
-  DesignOutlined,
   PhoneOutlined,
   MailOutlined,
   EnvironmentOutlined,
   StarOutlined,
   CheckCircleOutlined,
   ClockCircleOutlined,
-  TeamOutlined,
   TrophyOutlined,
-  SafetyOutlined,
-  DollarOutlined,
   QuestionCircleOutlined,
   PictureOutlined,
   FileTextOutlined,
@@ -57,7 +47,7 @@ import {
 import './App.css';
 
 const { Title, Paragraph, Text } = Typography;
-const { Panel } = Collapse;
+// Removed unused Panel from Collapse
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -75,10 +65,7 @@ function App() {
     setLoading(false);
   }, []);
 
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: true
-  });
+  // Removed unused useInView variables
 
   const testimonials = [
     {
