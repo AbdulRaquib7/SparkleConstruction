@@ -225,14 +225,14 @@ function App() {
               <Button 
                 type="primary" 
                 size="large" 
-                icon={<PhoneOutlined />}
+                icon={<a href="tel:+918428947174"><PhoneOutlined  style={{ transform:'rotate(470deg)'}}  /></a>}
                 className="btn-primary"
               >
                 Get Free Quote
               </Button>
               <Button 
                 size="large" 
-                icon={<PictureOutlined />}
+                icon={<PictureOutlined  />}
                 className="btn-secondary"
               >
                 View Our Work
@@ -295,7 +295,8 @@ function App() {
                   }
                 >
                   <Card.Meta
-                    title="Residential Construction"
+                    title="Residential
+                    Construction"
                     description="Custom homes, additions, and complete residential construction projects tailored to your vision."
                   />
                   <div className="service-features">
@@ -324,7 +325,7 @@ function App() {
                     title="Commercial Projects"
                     description="Office buildings, retail spaces, and commercial facilities built to meet your business needs."
                   />
-                  <div className="service-feature">
+                  <div className="service-features">
                     <Tag color="blue">Office Buildings</Tag>
                     <Tag color="green">Retail Spaces</Tag>
                     <Tag color="orange">Warehouses</Tag>
@@ -350,7 +351,7 @@ function App() {
                     title="Renovations"
                     description="Transform existing spaces with our expert renovation services and modern design solutions."
                   />
-                  <div className="service-featuree">
+                  <div className="service-features">
                     <Tag color="blue">Kitchen Remodel</Tag>
                     <Tag color="green">Bathroom Renovation</Tag>
                     <Tag color="orange">Basement Finish</Tag>
@@ -376,7 +377,7 @@ function App() {
                     title="Interior Design"
                     description="Complete interior design services to create beautiful, functional living and working spaces."
                   />
-                  <div className="service-featur">
+                  <div className="service-features">
                     <Tag color="blue">Space Planning</Tag>
                     <Tag color="green">Color Schemes</Tag>
                     <Tag color="orange">Furniture Selection</Tag>
@@ -1079,4 +1080,4 @@ KUMBAKONAM-612001</Text>
   );
 }
 
-export default App;
+export default App; 

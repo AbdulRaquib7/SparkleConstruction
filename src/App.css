@@ -462,6 +462,13 @@ section {
   padding: 120px 0;
   background: #ffffff;
 }
+.services .ant-row {
+  align-items: stretch;
+}
+
+.services .ant-col {
+  display: flex;
+}
 
 .services .container {
   max-width: 1200px;
@@ -470,17 +477,22 @@ section {
 }
 
 .service-card {
-  height: 100%;
-  border-radius: 100px;
-  overflow: hidden;
+  min-height: 100%;        /* ✅ allows card to grow */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(0, 0, 0, 0.06);
   background: white;
+  display: flex;
+  flex-direction: column;
+}
+.service-card .ant-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -507,39 +519,16 @@ section {
   line-height: 1.6;
   margin-bottom: 0;
 }
-.service-featuree{
-   margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 22px;
-  padding: 0 2rem 2rem;
-
-}
- .service-featur{
-   margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 0 2rem 2rem;
-
- }
- .service-feature{
-   margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 0 2rem 2rem;
-
- }
-  
-  
 .service-features {
-  margin-top: 1.5rem;
+  margin-top: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   padding: 0 2rem 2rem;
 }
+
+  
+
 
 
 /* Statistics Section */
