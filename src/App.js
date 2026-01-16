@@ -30,7 +30,8 @@ import {
   QuestionCircleOutlined,
   PictureOutlined,
   FileTextOutlined,
-  CustomerServiceOutlined
+  CustomerServiceOutlined,
+  PhoneFilled
 } from '@ant-design/icons';
 import { 
   Construction, 
@@ -64,21 +65,21 @@ function App() {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Muhammad Ali",
       role: "Homeowner",
       content: "Sparkle Construction transformed our outdated kitchen into a modern masterpiece. Their attention to detail and professionalism exceeded our expectations.",
       rating: 5,
       project: "Kitchen Renovation"
     },
     {
-      name: "Michael Chen",
+      name: "Dr.Gokul",
       role: "Business Owner",
       content: "The commercial office space they built for us is absolutely stunning. The project was completed on time and within budget.",
       rating: 5,
       project: "Office Complex"
     },
     {
-      name: "Emily Rodriguez",
+      name: "Abdul rahman",
       role: "Interior Designer",
       content: "Working with Sparkle Construction was a dream. Their craftsmanship and collaborative approach made our design vision come to life perfectly.",
       rating: 5,
@@ -90,7 +91,7 @@ function App() {
     {
       name: "Wazeer Ahamed",
       role: "CEO & Founder",
-      experience: "7+ years",
+      experience: "10+ years",
       specialties: ["Project Management", "Strategic Planning","Design", "Innovation"],
       image: "👨‍💼"
     },
@@ -125,7 +126,7 @@ function App() {
   const blogPosts = [
     {
       title: "Sustainable Building Practices for 2024",
-      excerpt: "Discover the latest trends in eco-friendly construction and how they can benefit your project.",
+      excerpt: "Explore key trends in sustainable construction for 2024.",
       date: "March 15, 2024",
       category: "Sustainability",
       readTime: "5 min read"
@@ -133,7 +134,7 @@ function App() {
     {
       title: "Kitchen Renovation: Before and After",
       excerpt: "See how we transformed a dated kitchen into a modern, functional space.",
-      date: "March 10, 2024",
+      date: "March 10, 2025",
       category: "Renovation",
       readTime: "3 min read"
     },
@@ -323,7 +324,7 @@ function App() {
                     title="Commercial Projects"
                     description="Office buildings, retail spaces, and commercial facilities built to meet your business needs."
                   />
-                  <div className="service-features">
+                  <div className="service-feature">
                     <Tag color="blue">Office Buildings</Tag>
                     <Tag color="green">Retail Spaces</Tag>
                     <Tag color="orange">Warehouses</Tag>
@@ -349,7 +350,7 @@ function App() {
                     title="Renovations"
                     description="Transform existing spaces with our expert renovation services and modern design solutions."
                   />
-                  <div className="service-features">
+                  <div className="service-featuree">
                     <Tag color="blue">Kitchen Remodel</Tag>
                     <Tag color="green">Bathroom Renovation</Tag>
                     <Tag color="orange">Basement Finish</Tag>
@@ -375,7 +376,7 @@ function App() {
                     title="Interior Design"
                     description="Complete interior design services to create beautiful, functional living and working spaces."
                   />
-                  <div className="service-features">
+                  <div className="service-featur">
                     <Tag color="blue">Space Planning</Tag>
                     <Tag color="green">Color Schemes</Tag>
                     <Tag color="orange">Furniture Selection</Tag>
@@ -609,41 +610,43 @@ function App() {
               Experienced professionals dedicated to bringing your vision to life
             </Paragraph>
           </motion.div>
-          
-          <Row gutter={[24, 24]} className="team-grid">
-            {teamMembers.map((member, index) => (
-              <Col xs={24} sm={12} lg={6} key={index}>
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -10, scale: 1.02 }}
-                >
-                  <Card className="team-card">
-                    <div className="team-avatar">
-                      <Avatar size={120} icon={member.image} />
-                    </div>
-                    <Card.Meta
-                      title={member.name}
-                      description={
-                        <div>
-                          <div className="member-role">{member.role}</div>
-                          <div className="member-experience">{member.experience}</div>
-                          <div className="member-specialties">
-                            {member.specialties.map((specialty, idx) => (
-                              <Tag key={idx} color="blue">{specialty}</Tag>
-                            ))}
-                          </div>
-                        </div>
-                      }
-                    />
-                  </Card>
-                </motion.div>
-              </Col>
-            ))}
-          </Row>
-        </div>
+        </div> 
+          <div className='container'>
+         <Row gutter={[24, 24]} className="team-grid" justify= "center" align="stretch">
+             {teamMembers.map((member, index) => (
+               <Col xs={24} sm={12} lg={6} key={index}>
+                 <motion.div
+                   initial={{ opacity: 0, y: 50 }}
+                   whileInView={{ opacity: 1, y: 0 }}
+                   transition={{ duration: 0.5, delay: index * 0.1 }}
+                   viewport={{ once: true }}
+                   whileHover={{ y: -10, scale: 1.02 }}
+                 >
+                   <Card className="team-card">
+                     <div className="team-avatar">
+                       <Avatar size={120} icon={member.image} />
+                     </div>
+                     <Card.Meta
+                       title={member.name}
+                       description={
+                         <div>
+                           <div className="member-role">{member.role}</div>
+                           <div className="member-experience">{member.experience}</div>
+                           <div className="member-specialties">
+                             {member.specialties.map((specialty, idx) => (
+                               <Tag key={idx} color="blue">{specialty}</Tag>
+                             ))}
+                           </div>
+                         </div>
+                       }
+                     />
+                   </Card>
+                 </motion.div>
+               </Col>
+             ))}
+           </Row>
+           </div>
+        
       </motion.section>
 
       {/* Testimonials Section */}
@@ -753,6 +756,7 @@ function App() {
 
       {/* FAQ Section */}
       <motion.section 
+      id='FAQ'
         className="faq-section"
         data-aos="fade-up"
       >
@@ -802,7 +806,7 @@ function App() {
               >
                 <Title level={2}>About Sparkle Construction</Title>
                 <Paragraph>
-                  With over 15 years of experience in the construction industry, Sparkle Construction has built a reputation for excellence, reliability, and innovation. We specialize in delivering high-quality construction projects that exceed our clients' expectations.
+                  With over 10 years of experience in the construction industry, Sparkle Construction has built a reputation for excellence, reliability, and innovation. We specialize in delivering high-quality construction projects that exceed our clients' expectations.
                 </Paragraph>
                 <Paragraph>
                   Our team of skilled professionals, architects, and designers work together to bring your vision to life, whether it's a custom home, commercial space, or renovation project.
@@ -815,8 +819,8 @@ function App() {
                       <span>Licensed & Insured</span>
                     </div>
                     <div className="feature-item">
-                      <CheckCircleOutlined style={{ color: '#52c41a', fontSize: 20 }} />
-                      <span>15+ Years Experience</span>
+                      <CheckCircleOutlined style={{ color: '#49c60aff', fontSize: 20 }} />
+                      <span>10+ Years Experience</span>
                     </div>
                     <div className="feature-item">
                       <CheckCircleOutlined style={{ color: '#52c41a', fontSize: 20 }} />
@@ -879,7 +883,9 @@ function App() {
                   <Title level={3}>Contact Information</Title>
                   <Space direction="vertical" size="large" style={{ width: '100%' }}>
                     <div className="contact-item">
-                      <PhoneOutlined style={{ fontSize: 24, color: '#2c5aa0' }} />
+                      <div className='icon'>
+                      <PhoneOutlined style={{ fontSize: 24, color: '#2c5aa0',transform:'rotate(470deg)' }} />
+                      </div>
                       <div>
                         <Title level={5}>Phone</Title>
                         <Text>+91 8428947174</Text>
@@ -996,9 +1002,9 @@ KUMBAKONAM-612001</Text>
                   We are committed to delivering exceptional construction services that exceed our clients' expectations.
                 </Paragraph>
                 <Space style={{ display: 'flex', justifyContent: 'start' }}>
-                  <Button type="primary" shape="circle" icon={<PhoneOutlined />} />
-                  <Button type="primary" shape="circle" icon={<MailOutlined />} />
-                  <Button type="primary" shape="circle" icon={<EnvironmentOutlined />} />
+                  <Button  type="primary" shape="circle" icon={<a href="tel:+918428947174" style={{color : 'inherit'}}><PhoneOutlined style={{ transform:'rotate(470deg)'}} /></a>} />
+                  <Button type="primary" shape="circle" icon={<a href="https://mail.google.com/mail/?view=cm&fs=1&to=wazeer665@gmail.com" style={{ color:'inherit'}}><MailOutlined /></a>} />
+                  <Button type="primary" shape="circle" icon={<a href="https://www.google.com/maps/search/?api=1&query=110+Mothilal+Street+Kumbakonam+612001" style={{ color:'inherit'}}> <EnvironmentOutlined/></a>} />
                 </Space>
               </div>
             </Col>
@@ -1007,10 +1013,10 @@ KUMBAKONAM-612001</Text>
               <div className="footer-section">
                 <Title level={4}>Services</Title>
                 <ul>
-                  <li>Residential Construction</li>
-                  <li>Commercial Projects</li>
-                  <li>Renovations</li>
-                  <li>Interior Design</li>
+                  <li><a href='#services'>Residential Construction</a></li>
+                  <li><a href='#services'>Commercial Projects</a></li>
+                  <li><a href='#services'>Renovations</a></li>
+                  <li><a href='#services'>Interior Design</a></li>
                   <li>Project Management</li>
                   <li>Consultation</li>
                 </ul>
@@ -1021,12 +1027,12 @@ KUMBAKONAM-612001</Text>
               <div className="footer-section">
                 <Title level={4}>Company</Title>
                 <ul>
-                  <li>About Us</li>
-                  <li>Our Team</li>
-                  <li>Careers</li>
+                  <li><a href='#about'>About Us</a></li>
+                  <li><a href='#team'>Team</a></li>
+                  <li><a href='#projects'>Career</a></li>
                   <li>Testimonials</li>
-                  <li>Blog</li>
-                  <li>FAQ</li>
+                  <li><a href='#blog'>Blog</a></li>
+                  <li><a href='#FAQ'>FAQ</a></li>
                 </ul>
               </div>
             </Col>
@@ -1036,7 +1042,7 @@ KUMBAKONAM-612001</Text>
                 <Title level={4}>Contact Info</Title>
                 <Space direction="vertical">
                   <div>
-                    <PhoneOutlined /> +91 8428947174
+                    <PhoneOutlined  style={{ transform:'rotate(470deg)' }} /> +91 8428947174
                   </div>
                   <div>
                     <MailOutlined /> Wazeer665@gmail.com
@@ -1073,4 +1079,4 @@ KUMBAKONAM-612001</Text>
   );
 }
 
-export default App;
+export default App;
