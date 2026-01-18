@@ -76,7 +76,7 @@ function App() {
       role: "Business Owner",
       content: "The commercial office space they built for us is absolutely stunning. The project was completed on time and within budget.",
       rating: 5,
-      project: "Office Complex"
+      project: "Renatl House"
     },
     {
       name: "Abdul rahman",
@@ -280,44 +280,74 @@ function App() {
             </Paragraph>
           </motion.div>
           
-          <Row gutter={[24, 24]} className="services-grid">
-            <Col xs={24} sm={12} lg={6}>
+          <Row gutter={[0, 0]} className="services-grid" justify="center">
+            <Col xs={24} sm={12} md={12} lg={6} xl={6}>
               <motion.div
-                whileHover={{ y: -10, scale: 1.02 }}
-                transition={{ duration: 0.3 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                whileHover={{ y: -15, scale: 1.03 }}
               >
                 <Card 
                   className="service-card"
                   cover={
                     <div className="service-icon">
-                      <HomeWork sx={{ fontSize: 60, color: '#2c5aa0' }} />
+                      <motion.div
+                        animate={{ 
+                          rotate: [0, 5, -5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 3,
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                      >
+                        <HomeWork sx={{ fontSize: 80, color: '#ffffff' }} />
+                      </motion.div>
                     </div>
                   }
                 >
                   <Card.Meta
-                    title="Residential
-                    Construction"
+                    title="Residential Construction"
                     description="Custom homes, additions, and complete residential construction projects tailored to your vision."
                   />
                   <div className="service-features">
                     <Tag color="blue">Custom Homes</Tag>
-                    <Tag color="green">Additions</Tag>
-                    <Tag color="orange">Renovations</Tag>
+                    <Tag color="orange">Additions</Tag>
+                    <Tag color="geekblue">Renovations</Tag>
                   </div>
                 </Card>
               </motion.div>
             </Col>
             
-            <Col xs={24} sm={12} lg={6}>
+            <Col xs={24} sm={12} md={12} lg={6} xl={6}>
               <motion.div
-                whileHover={{ y: -10, scale: 1.02 }}
-                transition={{ duration: 0.3 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                whileHover={{ y: -15, scale: 1.03 }}
               >
                 <Card 
                   className="service-card"
                   cover={
                     <div className="service-icon">
-                      <Business sx={{ fontSize: 60, color: '#2c5aa0' }} />
+                      <motion.div
+                        animate={{ 
+                          rotate: [0, -5, 5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 3,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: 0.5
+                        }}
+                      >
+                        <Business sx={{ fontSize: 80, color: '#ffffff' }} />
+                      </motion.div>
                     </div>
                   }
                 >
@@ -327,23 +357,39 @@ function App() {
                   />
                   <div className="service-features">
                     <Tag color="blue">Office Buildings</Tag>
-                    <Tag color="green">Retail Spaces</Tag>
-                    <Tag color="orange">Warehouses</Tag>
+                    <Tag color="orange">Retail Spaces</Tag>
+                    <Tag color="geekblue">Warehouses</Tag>
                   </div>
                 </Card>
               </motion.div>
             </Col>
             
-            <Col xs={24} sm={12} lg={6}>
+            <Col xs={24} sm={12} md={12} lg={6} xl={6}>
               <motion.div
-                whileHover={{ y: -10, scale: 1.02 }}
-                transition={{ duration: 0.3 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                whileHover={{ y: -15, scale: 1.03 }}
               >
                 <Card 
                   className="service-card"
                   cover={
                     <div className="service-icon">
-                      <ToolOutlined style={{ fontSize: 60, color: '#2c5aa0' }} />
+                      <motion.div
+                        animate={{ 
+                          rotate: [0, 5, -5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 3,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: 1
+                        }}
+                      >
+                        <ToolOutlined style={{ fontSize: 80, color: '#ffffff' }} />
+                      </motion.div>
                     </div>
                   }
                 >
@@ -353,23 +399,39 @@ function App() {
                   />
                   <div className="service-features">
                     <Tag color="blue">Kitchen Remodel</Tag>
-                    <Tag color="green">Bathroom Renovation</Tag>
-                    <Tag color="orange">Basement Finish</Tag>
+                    <Tag color="geekblue">Basement Finish</Tag>
+                    <Tag color="orange">Bathroom Renovation</Tag>
                   </div>
                 </Card>
               </motion.div>
             </Col>
             
-            <Col xs={24} sm={12} lg={6}>
+            <Col xs={24} sm={12} md={12} lg={6} xl={6}>
               <motion.div
-                whileHover={{ y: -10, scale: 1.02 }}
-                transition={{ duration: 0.3 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                whileHover={{ y: -15, scale: 1.03 }}
               >
                 <Card 
                   className="service-card"
                   cover={
                     <div className="service-icon">
-                      <DesignServices sx={{ fontSize: 60, color: '#2c5aa0' }} />
+                      <motion.div
+                        animate={{ 
+                          rotate: [0, -5, 5, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 3,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: 1.5
+                        }}
+                      >
+                        <DesignServices sx={{ fontSize: 80, color: '#ffffff' }} />
+                      </motion.div>
                     </div>
                   }
                 >
@@ -379,8 +441,8 @@ function App() {
                   />
                   <div className="service-features">
                     <Tag color="blue">Space Planning</Tag>
-                    <Tag color="green">Color Schemes</Tag>
-                    <Tag color="orange">Furniture Selection</Tag>
+                    <Tag color="orange">Color Schemes</Tag>
+                    <Tag color="geekblue">Furniture Selection</Tag>
                   </div>
                 </Card>
               </motion.div>
@@ -499,14 +561,27 @@ function App() {
           <div className="projects-grid-light">
             <motion.div
               className="project-item-light"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial={{ opacity: 0, y: 50, rotateX: -15 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+              transition={{ duration: 0.8, delay: 0.1, type: "spring", stiffness: 100 }}
               viewport={{ once: true }}
-              whileHover={{ y: -8, scale: 1.02 }}
+              whileHover={{ y: -12, scale: 1.03, rotateY: 2 }}
             >
               <div className="project-image-light">
-                <div className="project-icon-light">
+                <img 
+                  src="/project1.jpeg" 
+                  alt="Modern Family Home" 
+                  className="project-img"
+                  onError={(e) => {
+                    const img = e.target;
+                    const fallback = img.nextElementSibling;
+                    if (fallback) {
+                      img.style.display = 'none';
+                      fallback.style.display = 'flex';
+                    }
+                  }}
+                />
+                <div className="project-icon-light" style={{ display: 'none' }}>
                   <HomeWork sx={{ fontSize: 60, color: 'white' }} />
                 </div>
                 <div className="project-overlay-light">
@@ -530,14 +605,27 @@ function App() {
             
             <motion.div
               className="project-item-light"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0, y: 50, rotateX: -15 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 100 }}
               viewport={{ once: true }}
-              whileHover={{ y: -8, scale: 1.02 }}
+              whileHover={{ y: -12, scale: 1.03, rotateY: 2 }}
             >
               <div className="project-image-light">
-                <div className="project-icon-light">
+                <img 
+                  src="/project2.jpeg" 
+                  alt="Office Complex" 
+                  className="project-img"
+                  onError={(e) => {
+                    const img = e.target;
+                    const fallback = img.nextElementSibling;
+                    if (fallback) {
+                      img.style.display = 'none';
+                      fallback.style.display = 'flex';
+                    }
+                  }}
+                />
+                <div className="project-icon-light" style={{ display: 'none' }}>
                   <Business sx={{ fontSize: 60, color: 'white' }} />
                 </div>
                 <div className="project-overlay-light">
@@ -547,28 +635,41 @@ function App() {
                 </div>
               </div>
               <div className="project-content-light">
-                <Title level={4} className="project-title-light">Office Complex</Title>
+                <Title level={4} className="project-title-light">Rental House</Title>
                 <Paragraph className="project-description-light">
                   Commercial building with modern amenities and sustainable features for growing businesses.
                 </Paragraph>
                 <div className="project-meta-light">
                   <div className="project-tag-light">Commercial</div>
                   <div className="project-tag-light">LEED Certified</div>
-                  <div className="project-tag-light">50,000 sq ft</div>
+                  <div className="project-tag-light">5000 sq ft</div>
                 </div>
               </div>
             </motion.div>
             
             <motion.div
               className="project-item-light"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial={{ opacity: 0, y: 50, rotateX: -15 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+              transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 100 }}
               viewport={{ once: true }}
-              whileHover={{ y: -8, scale: 1.02 }}
+              whileHover={{ y: -12, scale: 1.03, rotateY: 2 }}
             >
               <div className="project-image-light">
-                <div className="project-icon-light">
+                <img 
+                  src="/project3.png" 
+                  alt="Kitchen Renovation" 
+                  className="project-img"
+                  onError={(e) => {
+                    const img = e.target;
+                    const fallback = img.nextElementSibling;
+                    if (fallback) {
+                      img.style.display = 'none';
+                      fallback.style.display = 'flex';
+                    }
+                  }}
+                />
+                <div className="project-icon-light" style={{ display: 'none' }}>
                   <ToolOutlined style={{ fontSize: 60, color: 'white' }} />
                 </div>
                 <div className="project-overlay-light">
