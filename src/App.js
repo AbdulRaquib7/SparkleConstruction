@@ -30,8 +30,7 @@ import {
   QuestionCircleOutlined,
   PictureOutlined,
   FileTextOutlined,
-  CustomerServiceOutlined,
-  PhoneFilled
+  CustomerServiceOutlined
 } from '@ant-design/icons';
 import { 
   Construction, 
