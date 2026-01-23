@@ -30,15 +30,11 @@ import {
   QuestionCircleOutlined,
   PictureOutlined,
   FileTextOutlined,
-  CustomerServiceOutlined
+  CustomerServiceOutlined,
+  HomeOutlined,
+  BankOutlined,
+  HighlightOutlined
 } from '@ant-design/icons';
-import { 
-  Construction, 
-  Business, 
-  HomeWork, 
-  DesignServices,
-  People
-} from '@mui/icons-material';
 import './App.css';
 
 const { Title, Paragraph, Text } = Typography;
@@ -255,7 +251,7 @@ function App() {
               ease: "easeInOut"
             }}
           >
-            <Construction sx={{ fontSize: 120, color: 'white' }} />
+            <ToolOutlined style={{ fontSize: 120, color: 'white' }} />
           </motion.div>
         </motion.div>
       </motion.section>
@@ -303,7 +299,7 @@ function App() {
                           ease: "easeInOut"
                         }}
                       >
-                        <HomeWork sx={{ fontSize: 80, color: '#ffffff' }} />
+                        <HomeOutlined style={{ fontSize: 80, color: '#ffffff' }} />
                       </motion.div>
                     </div>
                   }
@@ -345,7 +341,7 @@ function App() {
                           delay: 0.5
                         }}
                       >
-                        <Business sx={{ fontSize: 80, color: '#ffffff' }} />
+                        <BankOutlined style={{ fontSize: 80, color: '#ffffff' }} />
                       </motion.div>
                     </div>
                   }
@@ -429,7 +425,7 @@ function App() {
                           delay: 1.5
                         }}
                       >
-                        <DesignServices sx={{ fontSize: 80, color: '#ffffff' }} />
+                        <HighlightOutlined style={{ fontSize: 80, color: '#ffffff' }} />
                       </motion.div>
                     </div>
                   }
@@ -581,7 +577,7 @@ function App() {
                   }}
                 />
                 <div className="project-icon-light" style={{ display: 'none' }}>
-                  <HomeWork sx={{ fontSize: 60, color: 'white' }} />
+                  <HomeOutlined style={{ fontSize: 60, color: 'white' }} />
                 </div>
                 <div className="project-overlay-light">
                   <Button type="primary" size="small" icon={<PictureOutlined />}>
@@ -625,7 +621,7 @@ function App() {
                   }}
                 />
                 <div className="project-icon-light" style={{ display: 'none' }}>
-                  <Business sx={{ fontSize: 60, color: 'white' }} />
+                  <BankOutlined style={{ fontSize: 60, color: 'white' }} />
                 </div>
                 <div className="project-overlay-light">
                   <Button type="primary" size="small" icon={<PictureOutlined />}>
@@ -779,7 +775,7 @@ function App() {
                       "{testimonial.content}"
                     </Paragraph>
                     <div className="testimonial-author">
-                      <Avatar size={60} icon={<People />} />
+                    <Avatar size={60} icon={<TeamOutlined />} />
                       <div className="author-info">
                         <Title level={4}>{testimonial.name}</Title>
                         <Text type="secondary">{testimonial.role}</Text>
@@ -945,7 +941,7 @@ function App() {
                 className="about-image"
               >
                 <div className="about-placeholder">
-                  <People sx={{ fontSize: 120, color: 'white' }} />
+                  <TeamOutlined style={{ fontSize: 120, color: 'white' }} />
                 </div>
               </motion.div>
             </Col>
